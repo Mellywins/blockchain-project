@@ -2,6 +2,11 @@
 
 You'll find in this readme the entire description accompanied by screenshots.
 
+- Team members:
+  - Wadhah Mahrouk
+  - Ghassen Zakraoui
+  - Oussema Zouaghi
+
 ## Description
 
 We have created an NFT minting website. The price of minting is set at `0.05 ETH`.
