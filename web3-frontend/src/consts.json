@@ -1,0 +1,159 @@
+{
+  "entries": [
+    {
+      "name": "0",
+      "description": "The description of the NFT 0",
+      "image": "https://firebasestorage.googleapis.com/v0/b/wow-antiafk.appspot.com/o/0.png?alt=media",
+      "external_url": "",
+      "attributes": [
+        { "trait_type": "Background", "value": "50 " },
+        { "trait_type": "Body", "value": "50" },
+        { "trait_type": "Outfits", "value": "100" },
+        { "trait_type": "Eyes", "value": "50" },
+        { "trait_type": "Facial", "value": "75" },
+        { "trait_type": "Glasses", "value": "50" }
+      ],
+      "cid": "bafkreifxnzl62mrlt2omuus2m2wqcqd764bmfmeu74wg4klqjnjt6vh2we"
+    },
+    {
+      "name": "1",
+      "description": "The description of the NFT 1",
+      "image": "https://firebasestorage.googleapis.com/v0/b/wow-antiafk.appspot.com/o/1.png?alt=media",
+      "external_url": "",
+      "attributes": [
+        { "trait_type": "Background", "value": "50" },
+        { "trait_type": "Body", "value": "50" },
+        { "trait_type": "Outfits", "value": "50" },
+        { "trait_type": "Eyes", "value": "75" },
+        { "trait_type": "Facial", "value": "90" },
+        { "trait_type": "Glasses", "value": "50" }
+      ],
+      "cid": "bafkreienwgfjcky2svrjzgfhghaoobj6jdpxjnlxfe6lq6eraedvlpuypm"
+    },
+    {
+      "name": "2",
+      "description": "The description of the NFT 2",
+      "image": "https://firebasestorage.googleapis.com/v0/b/wow-antiafk.appspot.com/o/2.png?alt=media",
+      "external_url": "",
+      "attributes": [
+        { "trait_type": "Background", "value": "50" },
+        { "trait_type": "Body", "value": "50" },
+        { "trait_type": "Outfits", "value": "100" },
+        { "trait_type": "Eyes", "value": "50" },
+        { "trait_type": "Mouths", "value": "50" },
+        { "trait_type": "Facial", "value": "75" },
+        { "trait_type": "Glasses", "value": "75" }
+      ],
+      "cid": "bafkreicvug3vohj2utrgxvmuyvqfs7kpifowogxhjvf5lr5nccsat33cxu"
+    },
+    {
+      "name": "3",
+      "description": "The description of the NFT 3",
+      "image": "https://firebasestorage.googleapis.com/v0/b/wow-antiafk.appspot.com/o/3.png?alt=media",
+      "external_url": "",
+      "attributes": [
+        { "trait_type": "Background", "value": "50" },
+        { "trait_type": "Body", "value": "95" },
+        { "trait_type": "Outfits", "value": "100" },
+        { "trait_type": "Eyes", "value": "50" },
+        { "trait_type": "Mouths", "value": "50" },
+        { "trait_type": "Facial", "value": "50" },
+        { "trait_type": "Glasses", "value": "75" }
+      ],
+      "cid": "bafkreiab4ijkbc7qowtdienthqqokduo4ga2vgzq6ndtvc3juxasvo5l7u"
+    },
+    {
+      "name": "4",
+      "description": "The description of the NFT 4",
+      "image": "https://firebasestorage.googleapis.com/v0/b/wow-antiafk.appspot.com/o/4.png?alt=media",
+      "external_url": "",
+      "attributes": [
+        { "trait_type": "Background", "value": "75" },
+        { "trait_type": "Body", "value": "75" },
+        { "trait_type": "Outfits", "value": "50" },
+        { "trait_type": "Eyes", "value": "50" },
+        { "trait_type": "Mouths", "value": "50" },
+        { "trait_type": "Facial", "value": "50" },
+        { "trait_type": "Glasses", "value": "50" }
+      ],
+      "cid": "bafkreidfa6mf3ougj65fi736qngk3eehodwjtglp2ddoetfgk4emyjt2l4"
+    },
+    {
+      "name": "5",
+      "description": "The description of the NFT 5",
+      "image": "https://firebasestorage.googleapis.com/v0/b/wow-antiafk.appspot.com/o/5.png?alt=media",
+      "external_url": "",
+      "attributes": [
+        { "trait_type": "Background", "value": "100" },
+        { "trait_type": "Body", "value": "95" },
+        { "trait_type": "Outfits", "value": "50" },
+        { "trait_type": "Eyes", "value": "50" },
+        { "trait_type": "Mouths", "value": "50" },
+        { "trait_type": "Facial", "value": "50" },
+        { "trait_type": "Glasses", "value": "50" }
+      ],
+      "cid": "bafkreiaatk2tl47gekcbbkx56fnmemw5qhhuqxgsezdye5kbcevnjs7m64"
+    },
+    {
+      "name": "6",
+      "description": "The description of the NFT 6",
+      "image": "https://firebasestorage.googleapis.com/v0/b/wow-antiafk.appspot.com/o/6.png?alt=media",
+      "external_url": "",
+      "attributes": [
+        { "trait_type": "Background", "value": "75" },
+        { "trait_type": "Body", "value": "75" },
+        { "trait_type": "Outfits", "value": "75" },
+        { "trait_type": "Eyes", "value": "50" },
+        { "trait_type": "Facial", "value": "50" },
+        { "trait_type": "Glasses", "value": "75" }
+      ],
+      "cid": "bafkreierm7axk73lxykkfmfi6wyufbxyr3sjfc3cf44l5hg752jy3uy3tm"
+    },
+    {
+      "name": "7",
+      "description": "The description of the NFT 7",
+      "image": "https://firebasestorage.googleapis.com/v0/b/wow-antiafk.appspot.com/o/7.png?alt=media",
+      "external_url": "",
+      "attributes": [
+        { "trait_type": "Background", "value": "50" },
+        { "trait_type": "Body", "value": "50" },
+        { "trait_type": "Outfits", "value": "100" },
+        { "trait_type": "Eyes", "value": "50" },
+        { "trait_type": "Mouths", "value": "50" },
+        { "trait_type": "Facial", "value": "75" },
+        { "trait_type": "Glasses", "value": "50" }
+      ],
+      "cid": "bafkreicjtw7wf2irrbkjjecmeb35pciqmw6c3kvodrbrlluc35numoy72y"
+    },
+    {
+      "name": "8",
+      "description": "The description of the NFT 8",
+      "image": "https://firebasestorage.googleapis.com/v0/b/wow-antiafk.appspot.com/o/8.png?alt=media",
+      "external_url": "",
+      "attributes": [
+        { "trait_type": "Background", "value": "50 " },
+        { "trait_type": "Body", "value": "95" },
+        { "trait_type": "Outfits", "value": "90" },
+        { "trait_type": "Eyes", "value": "50" },
+        { "trait_type": "Facial", "value": "90" },
+        { "trait_type": "Glasses", "value": "50" }
+      ],
+      "cid": "bafkreihhdjco2falaorhvxoker5bgvd5tfmj62konrlm7haaekvhhxxdhq"
+    },
+    {
+      "name": "9",
+      "description": "The description of the NFT 9",
+      "image": "https://firebasestorage.googleapis.com/v0/b/wow-antiafk.appspot.com/o/9.png?alt=media",
+      "external_url": "",
+      "attributes": [
+        { "trait_type": "Background", "value": "50 " },
+        { "trait_type": "Body", "value": "95" },
+        { "trait_type": "Outfits", "value": "90" },
+        { "trait_type": "Eyes", "value": "75" },
+        { "trait_type": "Facial", "value": "50" },
+        { "trait_type": "Glasses", "value": "50" }
+      ],
+      "cid": "bafkreif7jhhfuvacyj5ntkv6ujkstjwfn42nnuoqgwobf64ntememutqmy"
+    }
+  ]
+}

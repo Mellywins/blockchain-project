@@ -19,7 +19,7 @@ contract SwagDogs is ERC721, ERC721URIStorage, Ownable {
 
     // Sets the URI format to be on IPFS
     function _baseURI() internal pure override returns (string memory) {
-        return "ipfs://";
+        return "https://firebasestorage.googleapis.com/v0/b/wow-antiafk.appspot.com/o/";
     }
     // makes the tokens mintable
     function safeMint(address to, string memory uri) public onlyOwner {
@@ -59,7 +59,7 @@ contract SwagDogs is ERC721, ERC721URIStorage, Ownable {
         _setTokenURI(tokenId, uri);
         return tokenId;
     }
-    
+
     function count() public view returns (uint256) {
         return _tokenIdCounter.current();
     }

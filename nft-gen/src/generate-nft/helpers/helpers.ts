@@ -48,10 +48,13 @@ export const pinataSetupGuard = async (config: ConfigService) => {
     pinataApiKey,
     pinataSecretApiKey,
   });
-  await pinata.testAuthentication().catch((err) => {
-    console.error('Pinata authentication failed with error: ', err);
-    process.exit(1);
-  });
+  await pinata
+    .testAuthentication()
+    .catch((err) => {
+      console.error('Pinata authentication failed with error: ', err);
+      process.exit(1);
+    })
+    .then(() => console.log('Pinata authentication successful'));
   return pinata;
 };
 /**

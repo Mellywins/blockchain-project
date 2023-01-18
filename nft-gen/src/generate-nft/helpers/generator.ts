@@ -1,3 +1,4 @@
+import { writeFileSync } from 'fs';
 import Jimp, { read } from 'jimp';
 import { Readable } from 'stream';
 import { ADJECTIVES, NAMES } from '../constants';
@@ -63,24 +64,38 @@ export const generator = async (
     read(`${assetsPath}/Background/${_traits[0].layer}`),
   );
 
-  const imageName = `${ADJECTIVES.at(
-    Math.random() * ADJECTIVES.length - 1,
-  )}-${NAMES.at(Math.random() * NAMES.length - 1)}`;
+  const imageName = `${iteration}`;
   await composedImage.write(`${output}/${imageName}.png`);
   await sleep(20);
   if (uploadClients.storageBucket && uploadClients.pinataClient) {
-    uploadToFirebase(
+    const imageFirebaseMetadata = await uploadToFirebase(
       `${output}/${imageName}.png`,
       uploadClients?.storageBucket,
     );
     composedImage.getBuffer('image/png', async (err, buffer) => {
       if (err) throw err;
-      const ipfsMetadata = await uploadToPinata(
-        buffer,
+      console.log('About to upload to Pinata');
+
+      const metadata = createMetadata(_traits, imageName, {
+        imageFirebaseMetadata,
+      });
+      const ipfsData = await uploadToPinata(
+        Buffer.from(JSON.stringify(metadata)),
         imageName,
         uploadClients?.pinataClient,
+      ).then((res) => {
+        console.log('Finished uploading to Pinata', res);
+        return res;
+      });
+
+      writeFileSync(
+        `${output}/${imageName}.json`,
+        JSON.stringify({ ...metadata, cid: ipfsData.IpfsHash }),
       );
-      console.log(createMetadata(_traits, imageName, { ...ipfsMetadata }));
+      await uploadToFirebase(
+        `${output}/${imageName}.json`,
+        uploadClients?.storageBucket,
+      );
     });
   }
 
@@ -107,6 +122,8 @@ export const createMetadata = (
   name: string,
   extraData: Record<string, any> = {},
 ): NftMetadata => {
+  const _baseBucket =
+    'https://firebasestorage.googleapis.com/v0/b/wow-antiafk.appspot.com/o/';
   return traits.reduce(
     (acc, trait) => {
       return trait.layer !== undefined
@@ -125,21 +142,24 @@ export const createMetadata = (
     {
       name,
       description: `The description of the NFT ${name}`,
-      image:
-        extraData?.IpfsHash === undefined
-          ? 'ipfs://'
-          : 'ipfs://' + extraData?.IpfsHash,
+      image: _baseBucket + name + '.png?alt=media',
       //https://gateway.pinata.cloud/ipfs/
-      external_url: 'https://gateway.pinata.cloud/ipfs/' + extraData?.IpfsHash,
+      external_url: '',
       attributes: [],
     },
   );
 };
 
-const uploadToFirebase = async (imagePath: string, storageBucket: any) => {
+const uploadToFirebase = async (
+  imagePath: string,
+  storageBucket: any,
+  __metadata = false,
+) => {
   return await storageBucket
     .upload(imagePath, {
-      destination: `${imagePath.slice(imagePath.lastIndexOf('/') + 1)}`,
+      destination: __metadata
+        ? `/metadata/${imagePath.slice(imagePath.lastIndexOf('/') + 1)}`
+        : `${imagePath.slice(imagePath.lastIndexOf('/') + 1)}`,
       metadata: {
         cacheControl: 'public, max-age=31536000',
       },
@@ -149,7 +169,7 @@ const uploadToFirebase = async (imagePath: string, storageBucket: any) => {
       process.exit(1);
     })
     .then((data) => {
-      console.log('Uploaded to Firebase, data:', data);
+      console.log('Uploaded to Firebase successfully');
     });
 };
 const uploadToPinata = async (

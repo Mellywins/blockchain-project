@@ -45,7 +45,7 @@ export class GenerateNftCommand extends CommandRunner {
   @Option({
     flags: '-n, --number [number]',
     description: 'number of NFTs to generate',
-    defaultValue: 1,
+    defaultValue: 10,
   })
   parseNumber(val: string): number {
     return Number(val);
@@ -72,7 +72,7 @@ export class GenerateNftCommand extends CommandRunner {
   @Option({
     flags: '-upload, --upload [upload]',
     description: 'Include this flag to upload to Pinata',
-    defaultValue: false,
+    defaultValue: true,
   })
   parseUpload(val: string): boolean {
     return val === 'true';
